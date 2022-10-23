@@ -2,12 +2,13 @@ package codetoon.system;
 
 import java.util.ArrayList;
 import codetoon.variable.*;
+import java.io.Serializable;
 
-public class Memorys {
+public class Memorys implements Serializable{
 
-    public static ArrayList<Memory> memory;
+    public ArrayList<Memory> memory;
 
-    public static void setInstance(int size, int x, int y, int w, int h){
+    public void setInstance(int size, int x, int y, int w, int h){
         memory = new ArrayList<>();
         for(int i = 0; i < size; i ++){
           for(int c = 0; c < size; c ++){
@@ -20,7 +21,7 @@ public class Memorys {
         Variables.createVariable("memory", () -> new MemoryVariable(memory));
 
     }
-    public static Memory get(int i){
+    public Memory get(int i){
         return memory.get(i);
     }
     

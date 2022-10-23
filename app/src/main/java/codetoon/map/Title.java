@@ -11,8 +11,8 @@ public class Title extends Map{
       @Override
       public void action(int i){
         switch(i){
-          case 0: System.out.println("新規ゲームを始める。"); Main.getInstance().run(new PazzleStage(5));  break;
-          case 1: System.out.println("途中からゲームを始める。");break;
+          case 0: System.out.println("新規ゲームを始める。"); Main.getInstance().run(new PazzleStage(5, true));  break;
+          case 1: System.out.println("途中からゲームを始める。");Main.getInstance().run(new PazzleStage(5, false));break;
           case 2: System.exit(0); break;
         }
       }

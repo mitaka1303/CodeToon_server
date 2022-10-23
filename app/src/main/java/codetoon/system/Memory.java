@@ -3,11 +3,12 @@ package codetoon.system;
 import codetoon.main.Main;
 import codetoon.map.PazzleStage;
 import codetoon.util.TickRegistory;
+import java.io.Serializable;
 
 import java.awt.*;
 
 /** メモリーを描画、処理するクラス。 **/
-public class Memory extends Player{
+public class Memory extends Player implements Serializable{
     int x, y, w, h, idI, idC;
     private int counter = 0;
 
